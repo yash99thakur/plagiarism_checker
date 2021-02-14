@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+
+    <link rel="icon" href="http://www.simpleimageresizer.com/_uploads/photos/572a0c7c/ambedkar_logo_1_7.jpg"  type = "image/x-icon">
+  <title>Plagiarism Checker</title>
+
+  <style>
+    
+    .code_snip{
+      max-width: 53%;
+      margin: 0 auto;
+
+    }
+    .abstract{
+      padding-top:3em ;
+      max-width: 70%;
+      margin: 0 auto;
+    }
+
+    .nav li{
+      margin: 0 auto;
+      max-width: 50%;
+    font-size: xx-large;
+    }
+    .cosine-similarity{
+      padding-top:3em ;
+      max-width: 70%;
+      margin: 0 auto;
+    }
+    .team{
+      margin: 5em;
+    }
+     .column {
+      float: left;
+  width: 33.3%;
+  margin-bottom: 16px;
+  padding: 0 8px;
+ 
+  }
+
+.video{text-align: center;
+}
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+.card1 { 
+  width: 50%;
+  margin:0 auto;
+  padding: 0 8px;
+   max-width: 50%;
+   text-align: center;
+  
+}
+.aim
+{
+  padding-top:3em ;
+      max-width: 70%;
+      margin: 0 auto;
+
+}
+.intro{
+  text-align: justify;
+  padding-bottom: 3em;
+}
+.container {
+  padding: 0 16px;
+}
+
+.container::after, .row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.title {
+  color: grey;
+}
+.implement{
+  padding-top:3em ;
+      max-width: 70%;
+      margin: 0 auto;
+      text-align: justify;
+      padding-bottom: 3rem;
+}
+.implement h1{
+  padding: 1em;
+  text-align: center;
+}
+.implement img{
+  max-width: 50%;
+  margin: 0 auto;
+}
+.implement h3{
+  font-size: medium;
+}
+  </style>
+</head>
+<body>
+  
+  <ul class="nav nav-tabs" id="myTab" role="tablist">
+    <li class="nav-item">
+      <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">INTRODUCTION</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false">IMPLEMENTATION</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" id="contact-tab" data-toggle="tab" href="#contact" role="tab" aria-controls="contact" aria-selected="false">TEAM</a>
+    </li>
+  </ul>
+  <div class="tab-content" id="myTabContent">
+    <div class="tab-pane fade show active intro" id="home" role="tabpanel" aria-labelledby="home-tab"> 
+      <div class="abstract">
+        <h1>Abstract</h1>
+        <p>With the internet advancing day by day and the sources of information increasing, the
+          whole learning process has been revolutionized with ease of access and unlimited
+          opportunities. But the silver-lining sooner or later fades away and the downside to this
+          process is faced. The students have started blindly copying from the internet just in order
+          to get their assignments completed, hence giving rise to copy education rather than an
+          inspired education. This hampers not only with the learning process but when such
+          individuals are presented to the industry scale work their productivity, creativity
+          decreases.</p>
+          
+          
+      </div>
+      <div class="aim">
+        <h1> Aim of Project</h1>
+        <p>The main objective of this project is to develop a solution to detect plagiarism in
+          documented text file and also in source codes of the programs. We do not wish to
+          undermine someone’s capabilities and their morale by simply judging them on the basis
+          of the work they submit and making the over conscious. The simple objective is to make
+          them use their own creativity and enhance their problem-solving capabilities. Taking
+          inspirations from someone’s works is good but blindly copying them poses greater
+          threats
+</p>
+      </div>
+      <div class="aim">
+        <h1> Explaination to Working of project </h1>
+        <p>In our solution we have provided the user option to give the original source in 
+          text format or either we can scrape the web using google API 
+          so that we can get the source from the which data have been copied
+          .After getting the the plag text and information of orignal text we try to apply a machine learning model
+          which takes out the similarities between the two texts based on cosine similirity principle.
+          in which we make set of unique words using the both text and find the similarity between them in vector space.
+          After that our python application fetches the response from the model and display it to user in ha human readable format 
+          providing  the source 's URL if applicable       
+        </p>
+      </div>
+      <div class="aim">
+        <h1> Unique features </h1>
+        <ul>
+          <li> We have used language processing model which dosent depend on string matching but it uses the root words to find similarity in vector space. so it automatically neglects spelling mistaked  which is generally done to hide the plagrism from string matching models of pag checkers </li>
+       
+        </ul>
+      </div>
+      <div class="cosine-similarity">
+        <h1>Cosine Similarity</h1>
+        <p>Cosine similarity is a metric used to measure how similar the documents
+        are irrespective of their size. Mathematically, it measures the cosine of the
+        angle between two vectors projected in a multi-dimensional space. The
+        cosine similarity is advantageous because even if the two similar
+        documents are far apart by the Euclidean distance (due to the size of the
+        document), chances are they may still be oriented closer together. The
+        smaller the angle, higher the cosine similarity.</p>
+        <iframe class="video" width="900" height="515"src="https://www.youtube.com/embed/xY3jrJdpuQg" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </div>
+    </div>
+  <div class="tab-pane fade implement"  id="profile" role="tabpanel" aria-labelledby="profile-tab">
+    <h1>Tech Stack Used</h1>
+    <ul>
+      <li>Flask (Python Web App)</li>
+      <li>Python (For machine learning model) </li>
+      <li>HTML</li>
+      <li>CSS(Bootstrap)</li>
+      <li>Javascript (jQuery)</li>
+    </ul>
+    <h1>Flow Diagram</h1>
+    <img src="https://i.ibb.co/3YBJbkZ/flow.png" alt="" srcset="">
+    <h1>Code Snipets</h1>
+    <div class=" "><script src="https://gist.github.com/yash99thakur/0f951c9f96ebef192d158cac0770996c.js"></script></div>
+    <h1>Explaination</h1>
+    <h2>#STEP 1 - TAKING INPUT AND TOKENIZNG IT</h2>
+    <p>Input is taken from user using web app and
+       tokenised at same time. the string is lemmatized and 
+       unique words are identified after removing Stopwords
+      adn stored in set calles as universalSetOfUniqueWords </p>
+      <h2>#STEP 2 - RETRIVAL OF SOURCE TEXT</h2>
+  <p>if user provides the input source text then this step
+     is skipped otherwise using the previous input the key words are retrived to use them to scrap web
+    this helps us to scrape relevant material from web  </p>
+  <h3># STEP 2.1 - USING GOOGLE API TO WEB SCRAP USING BEAUTIFUL SOUP</h3>
+  <h3># STEP 2.2 - RETRIVAL OF REVLEVENT DATA FROM WEB SCRAPING</h3>
+  <h3># STEP 2.3 - PROCESSING THE INFORMATION RETRIVED </h3> 
+  <h3># STEP 2.4 - CLEANING DATA RETRIVED FROM WEB SCRAING </h3> 
+  <h3># STEP 2.5 - TOKENISING DATA FROM THE DATESAT RETRIVES FROM OG SOURCE AND MAPPING TO UNIQUE SET OF WORDS</h3>
+  <h2># STEP 3 - CALCULATING COSINE SIMILARITY</h2>
+  <p>After getting the both datasets and a set of unique words from retrived texts the cosine similarity 
+    formula is applied to find the match percent between the provided texts it is done using following steps</p>
+  <h3># STEP 3.1 - CALCULATING QUERY TERM FREQUENCY COUNTER</h3>
+  <h3> # STEP 3.2 - CALCULATING DATABASE TERM FREQUENCY COUNTER</h3>
+  <h3># STEP 3.3 - CALCULATING DOT PRODUCTS OF TER FREQUENCY VECTORS OPTAINED TO FIND MATCHING</h3>
+  <h3># STEP 3.4 - MATCH PERCENTAGE</h3>
+  </div>
+  
+    <div class="tab-pane fade team" id="contact" role="tabpanel" aria-labelledby="contact-tab">
+
+      <div class="card1">
+        
+        <div class="container">
+          <h2>PRAKASH RAO RAGIRI</h2>
+          <p class="title">PROFESSOR,CSE</p>
+          
+          <p>prakashrao@aiactr.ac.in</p>
+        
+        </div>
+      
+
+      <div class="row">
+        <div class="column">
+          <div class="card">
+           
+            <div class="container">
+              <h2>YASH THAKUR</h2>
+              <p class="title">DEVELOPER</p>
+         
+              <p>Yash.aiactr@gmail.com</p>
+             
+            </div>
+          </div>
+        </div>
+      
+        <div class="column">
+          <div class="card">
+            
+            <div class="container">
+              <h2>ANURAG DHYANI</h2>
+              <p class="title">Machine Learning Enthusiast</p>
+             
+              <p>anuragdhyani11@gmail.com</p>
+            
+            </div>
+          </div>
+        </div>
+        
+        <div class="column">
+          <div class="card">
+            
+            <div class="container">
+              <h2>NIKHIL TIWARI</h2>
+              <p class="title">Programmer, Imaginator</p>
+
+              <p>nikhiltiwari394@gmail.com</p>
+            
+            </div>
+          </div>
+        </div>
+      </div>
+      </div>
+    </div>
+  </div>
+  
+ 
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+</body>
+</html>
